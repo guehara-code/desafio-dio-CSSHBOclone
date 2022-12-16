@@ -1,0 +1,330 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap"); */
+
+:root {
+    --primary-color: #020228;
+    --secondary-color: #ff00e5;
+    --tertiary-color: #b535f6;
+    --btn-bg-color-gradient: linear-gradient(45deg,
+            #9b34ef 0%,
+            #490cb0 20%,
+            transparent 50%);
+    --btn-link-bg-color: #fff;
+    --btn-link-color: #000;
+    --card-bg-color: linear-gradient(0deg, transparent, #3b1e63);
+    --divider-bg-color: linear-gradient(90deg, #5516ba, rgba(255, 0, 229, 0.5) 80%);
+    --nav-bg-color: rgba(0, 0, 0, 0.3);
+    --text-color: #fff;
+    --link-color: #9e86ff;
+    --form-bg-color: rgba(211, 211, 211, 0.06);
+    --form-field-bg-color: rgba(0, 0, 0, 0.2);
+    --form-field-border: 1px solid rgba(255, 255, 255, 0.7);
+    --form-field-placeholder: rgba(255, 255, 255, 0.7);
+    --form-field-error: rgb(255, 76, 76);
+
+    scroll-behavior: smooth;
+}
+
+/* Custom Scroll */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--tertiary-color);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Raleway";
+}
+
+
+body {
+    background-color: var(--primary-color);
+   
+    /*background: linear-gradient(-45deg, #56125b, #0f0f10, #271e6e);
+    background-size: 400% 400%; */
+
+    
+
+}
+
+.header-container {
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--nav-bg-color);
+    height: 3rem;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.nav-entrar {
+    background-color: transparent;
+    color: var(--btn-link-bg-color);
+    font-weight: 600;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    border: none;
+    margin-right: 2rem;
+    text-decoration: none;
+
+}
+
+.nav-assine {
+
+
+    background-color: var(--tertiary-color);
+    color: var(--btn-link-bg-color);
+    font-weight: 600;
+    font-size: 0.8rem;
+    height: 2rem;
+    line-height: 2rem;
+    
+    letter-spacing: 3px;
+    border: none;
+    margin-right: 2rem;
+    height: 2rem;
+    width: 11rem;
+    border-radius: 1rem;
+    text-align: center; 
+    text-decoration: none;
+    transition: 1s;
+}
+.nav-assine:hover {
+    background-color: white;
+    color: black;
+}
+
+
+
+
+.planos-section {
+    margin-top: 8rem;
+    background-image: url("../images/background-movies-series.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 900px;
+
+
+}
+
+.planos-container {
+    
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    background: url(../images/background-movies-series.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    
+}
+
+.form {
+    color: var(--text-color);
+    width: 50rem;
+    background: var(--card-bg-color);
+
+    margin: 5rem auto;
+    /* flex-direction: column; */
+    /* align-items: center; */
+    
+    padding: 2rem;
+    border-radius: 1rem;
+
+    
+}
+
+.planos-container h2 {
+    color: var(--text-color);
+    text-align: center;
+    width: 40rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    width: 100%;
+}
+
+.planos-container span {
+    color: var(--text-color);
+    width: 100%;
+    
+    text-align: left;
+    font-size: 1rem;
+    
+}
+
+.input-email {
+    color: var(--text-color);
+    width: 98%;
+    margin-top: 1rem;
+    background-color: transparent;
+    border: 1px var(--text-color) solid;
+    height: 3rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    padding-left: 1rem;
+      
+}
+
+.input-email:invalid {
+   border: 1px red solid; 
+
+}
+
+.input-email:invalid + #erro-email {
+   display: block;
+    
+ }
+
+#erro-email {
+    color: red;
+    display: none;
+    
+}
+
+.input-password {
+    color: var(--text-color);
+    width: 98%;
+    margin-top: 1rem;
+    background-color: transparent;
+    border: 1px var(--text-color) solid;
+    height: 3rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    padding-left: 1rem;
+    
+}
+
+.input-password:invalid {
+    border: 1px red solid; 
+ 
+ }
+.input-password:invalid + #erro-password {
+    display: block;
+     
+}
+
+#erro-password {
+    color: red;
+    display: none; 
+   
+} 
+
+
+.item-type {
+    display: flex;
+    flex-direction: row;
+
+}
+
+
+.item-content li {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+
+}
+
+.item-content li::marker {
+    content: '+  ';
+    font-size: 2rem;
+}
+
+.item-button {
+    margin-top: 3rem;
+    height: 3rem;
+
+    background: rgb(48, 3, 87) var(--btn-bg-color-gradient);
+
+    border: none;
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    width: 12rem;
+    border-radius: 1.5rem;
+    align-self: center;
+   
+}
+
+
+.item-senha {
+    margin-top: 3rem;
+    height: 3rem;
+    
+    background: transparent;
+
+    border: none;
+    color: var(--link-color);
+    font-size: 1rem;
+    font-weight: 700;
+    
+    width: 12rem;
+    border-radius: 1.5rem;
+    align-self: center;
+}
+
+/* section 2 */
+
+
+
+.section2-links {
+    margin-top: 8rem;
+    height: 3rem;
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+}
+
+.section2-links span {
+    color: var(--link-color);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: 1.5rem;
+}
+
+.section2-container p {
+    color: var(--link-color);
+    display: block;
+    margin: auto;
+    font-size: 0.75rem;
+    margin-top: 0.8rem;
+}
+
+.section2-social {
+    margin-top: 4rem;
+    height: 3rem;
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.section2-social span {
+    color: var(--link-color);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: 1rem;
+}
+
+#copyright {
+    color: var(--link-color);
+    text-align: center;
+    font-size: 0.75rem;
+    margin-top: 0.8rem;
+}
